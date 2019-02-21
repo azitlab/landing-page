@@ -27,6 +27,7 @@ $(document).ready(function(){
 
     }
 
+    // Add Active Class
     $(window).on('scroll', function(e){
         if($(document).scrollTop() > $heroSection.outerHeight() - 50){
             console.log('add class');
