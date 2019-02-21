@@ -72,7 +72,7 @@ $(document).ready(function(){
                     }, 600, function() {
                         var $target = $(target);
                         $target.focus();
-                        if ($target.is(":focus")) {
+                        if ($target.is(':focus')) {
                             return false;
                         } else {
                             $target.attr('tabindex','-1');
