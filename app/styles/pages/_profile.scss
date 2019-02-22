@@ -2,7 +2,6 @@
  * Member Profile Stylesheet
  * ============================ */
 #member-profile{
-
   .profile{
     background-color: #FFF;
     z-index: 1;
@@ -76,12 +75,43 @@
       .profile-content-block{
         margin-bottom: 40px;
 
+        .title{
+          margin-bottom: 25px;
+          color: $secondary-color;
+        }
+
         .content-block-title{
           margin-bottom: 30px;
         }
 
         .content-block-context{
           padding: 0 20px;
+        }
+      }
+    }
+  }
+
+  /* ============== Special Elements =============== */
+  .technology-list{
+    padding: 0;
+    margin: 10px 0 30px;
+
+    .technology-item{
+      list-style-type: none;
+      padding:0;
+      align-items: center;
+      margin-bottom: 10px;
+
+      .row{
+        align-items: center;
+
+        .tecnology-icon{
+          text-align: center; 
+          
+          i,em{
+            font-size: 34px;
+            color: #DDD;
+          }
         }
       }
     }
