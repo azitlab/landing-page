@@ -14,7 +14,7 @@
 
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
@@ -378,47 +378,13 @@
 </script>
 
 <!-- build:js scripts/vendor.js -->
-
 <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
-
 <script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-<script>
-    $(document).ready(function(){
-        $('.profile-demo-slider').slick({
-            accessibility: true,
-            autoplay: true,
-            autoplaySpeed: 8000,
-            speed: 800,
-            arrows: true,
-            prevArrow: '<i class="fa fa-arrow-left slider-arrow slider-arrow__prev" aria-hidden="true"></i>\n',
-            nextArrow: '<i class="fa fa-arrow-right slider-arrow slider-arrow__next" aria-hidden="true"></i>\n',
-            pauseOnFocus: true,
-            pauseOnHover: true,
-            swipeToSlide: true,
-            fade: true,
-            cssEase: 'ease-out'
-        });
-    });
-
-    $('.profile-demo-slider').on( 'init', function (slick){
-        $activeSlide = $('.slick-current.slick-active');
-        $activeSlide.find('.portfolio-information').addClass('active');
-    });
-
-    $('.profile-demo-slider').on( 'afterChange', function (slick, currentSlide){
-        console.log(currentSlide.currentSlide)
-        $activeSlide = $('.slick-current.slick-active');
-        $allSlide = $('.slick-slide:not(.slick-current.slick-active)');
-        $activeSlide.find('.portfolio-information').addClass('active');
-        $allSlide.find('.portfolio-information').removeClass('active');
-    });
-
-</script>
-
+<script type="text/javascript" src="/node_modules/slick-carousel/slick/slick.js"></script>
 <!-- endbuild -->
+
+<script type="text/javascript" src="/node_modules/slick-carousel/slick/slick.js"></script>
+
 <!-- build:js scripts/main.js -->
 <script src="scripts/main.js"></script>
 <!-- endbuild -->

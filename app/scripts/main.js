@@ -84,3 +84,33 @@ $(document).ready(function(){
             }
         });
 });
+
+$(document).ready(function(){
+    $('.profile-demo-slider').slick({
+        accessibility: true,
+        autoplay: true,
+        autoplaySpeed: 8000,
+        speed: 800,
+        arrows: true,
+        prevArrow: '<i class="fa fa-arrow-left slider-arrow slider-arrow__prev" aria-hidden="true"></i>\n',
+        nextArrow: '<i class="fa fa-arrow-right slider-arrow slider-arrow__next" aria-hidden="true"></i>\n',
+        pauseOnFocus: true,
+        pauseOnHover: true,
+        swipeToSlide: true,
+        fade: true,
+        cssEase: 'ease-out'
+    });
+});
+
+$('.profile-demo-slider').on( 'init', function (slick){
+    $activeSlide = $('.slick-current.slick-active');
+    $activeSlide.find('.portfolio-information').addClass('active');
+});
+
+$('.profile-demo-slider').on( 'afterChange', function (slick, currentSlide){
+    console.log(currentSlide.currentSlide)
+    $activeSlide = $('.slick-current.slick-active');
+    $allSlide = $('.slick-slide:not(.slick-current.slick-active)');
+    $activeSlide.find('.portfolio-information').addClass('active');
+    $allSlide.find('.portfolio-information').removeClass('active');
+});
