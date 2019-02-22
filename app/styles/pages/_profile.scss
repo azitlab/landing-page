@@ -92,6 +92,8 @@
   }
 
   /* ============== Special Elements =============== */
+
+  /* List of featured Technologies */
   .technology-list{
     padding: 0;
     margin: 10px 0 30px;
@@ -117,6 +119,7 @@
     }
   }
 
+  /* Portfolio Demo Slider */
   .profile-demo-slider{
     margin-top: 30px;
     color: #FFF;
@@ -217,5 +220,147 @@
         }
       }
     }
+  }
+
+  /* Working Timeline */
+  .working-history{
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+
+    &:before{
+      content: '';
+      width: 5px;
+      height: 9999px;
+      position: absolute;
+      background-color: $secondary-color;
+      left: 40px;
+    }
+
+    &__timeline{
+      padding: 0;
+
+      &__milestone{
+        list-style: none;
+        padding: 10px 60px 0 100px;
+        margin-top: 40px;
+        position: relative;
+
+        &:first-child{
+          margin-top: 20px;
+        }
+
+        &:before{
+          content: '';
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          top: 10px;
+          left: 28px;
+          border: 5px solid $secondary-color;
+          background-color: #FFF;
+          border-radius: 50%;
+
+          // init state
+          opacity: 0;
+          transform: scale(0.3);
+        }
+
+        .working-period{
+          text-transform: uppercase;
+          font-weight: 600;
+          height: 30px;
+          width: auto;
+          display: inline-block;
+          line-height: 30px;
+          margin-bottom: 10px;
+          padding: 0 22px;
+          color: #FFF;
+          background-color: $secondary-color;
+          position: relative;
+
+          // init state
+          opacity: 0;
+          transform: translateX(40px);
+
+          &:before{
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            border-top: 8px solid transparent;
+            border-right: 10px solid $secondary-color;
+            border-bottom: 8px solid transparent;
+            right: calc(100%);
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+          }
+        }
+
+        .company-info{
+          color: $third-color;
+          font-weight: 600;
+          font-size: 18px;
+          padding-left: 22px;
+
+          // init state
+          opacity: 0;
+          transform: translateX(40px);
+        }
+
+        .description{
+          margin-top: 10px;
+          padding-left: 22px;
+
+          // init state
+          opacity: 0;
+          transform: translateX(40px);
+
+          *{
+            font-size: 15px;
+          }
+        }
+
+        &.active{
+
+          &:before{
+            -webkit-animation: popOut 500ms ease-out forwards;
+            -o-animation: popOut 500ms ease-out forwards;
+            animation: popOut 500ms ease-out forwards;
+          }
+
+          .working-period{
+            transition: all ease-out 500ms 400ms;
+            opacity: 1;
+            transform: translateX(0px);
+          }
+
+          .description, .company-info{
+            // init state
+            transition: all ease-out 500ms 800ms;
+            opacity: 1;
+            transform: translateX(0px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes popOut {
+  0%{
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  80%{
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  100%{
+    opacity: 1;
+    transform: scale(1);
   }
 }
