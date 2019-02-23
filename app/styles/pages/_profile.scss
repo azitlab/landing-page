@@ -2,7 +2,6 @@
  * Member Profile Stylesheet
  * ============================ */
 #member-profile{
-
   .profile{
     background-color: #FFF;
     z-index: 1;
@@ -76,6 +75,11 @@
       .profile-content-block{
         margin-bottom: 40px;
 
+        .title{
+          margin-bottom: 25px;
+          color: $secondary-color;
+        }
+
         .content-block-title{
           margin-bottom: 30px;
         }
@@ -85,5 +89,278 @@
         }
       }
     }
+  }
+
+  /* ============== Special Elements =============== */
+
+  /* List of featured Technologies */
+  .technology-list{
+    padding: 0;
+    margin: 10px 0 30px;
+
+    .technology-item{
+      list-style-type: none;
+      padding:0;
+      align-items: center;
+      margin-bottom: 10px;
+
+      .row{
+        align-items: center;
+
+        .tecnology-icon{
+          text-align: center;
+
+          i,em{
+            font-size: 34px;
+            color: #DDD;
+          }
+        }
+      }
+    }
+  }
+
+  /* Portfolio Demo Slider */
+  .profile-demo-slider{
+    margin-top: 30px;
+    color: #FFF;
+    position: relative;
+
+    .slider-arrow{
+      position: absolute;
+      top: 50%;
+      z-index: 3;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      font-size: 23px;
+      line-height: 50px;
+      text-align: center;
+      color: #DDD;
+      cursor: pointer;
+      transition: all ease-out 150ms 20ms;
+
+      &:hover{
+        color: #FFF;
+        text-shadow: 1px 2px 2px $secondary-color;
+      }
+
+      &__next{
+        right: 0;
+      }
+
+      &__prev{
+        left: 0;
+      }
+    }
+
+    .portfolio-item{
+      height: 400px;
+      overflow: hidden;
+      position: relative;
+
+      .portfolio-information{
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        color: #FFF;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        padding: 10px 40px;
+
+        *{
+          color: inherit;
+        }
+
+        .portfolio-item-context{
+          flex: 1;
+
+          .portfolio-name{
+            margin: 0;
+            opacity: 0;
+            transform: translateY(35px);
+            transition: all ease-out 440ms 20ms;
+          }
+
+          .portfolio-desc{
+            font-size: 13px;
+            opacity: 0;
+            transform: translateY(35px);
+            transition: all ease-out 440ms 250ms;
+          }
+        }
+
+        .portfolio-item-cta{
+          align-self: stretch;
+          display: flex;
+          align-items: center;
+          opacity: 0;
+          transform: translateX(30px);
+          transition: all ease-out 300ms 750ms;
+        }
+
+        &.active{
+          .portfolio-item-context{
+            .portfolio-name {
+              transform: translateY(0px);
+              opacity: 1;
+            }
+
+            .portfolio-desc{
+              transform: translateY(0px);
+              opacity: 0.8;
+            }
+          }
+
+          .portfolio-item-cta{
+            opacity: 1;
+            transform: translateX(0px);
+          }
+        }
+      }
+    }
+  }
+
+  /* Working Timeline */
+  .working-history{
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+
+    &:before{
+      content: '';
+      width: 5px;
+      height: 9999px;
+      position: absolute;
+      background-color: $secondary-color;
+      left: 40px;
+    }
+
+    &__timeline{
+      padding: 0;
+
+      &__milestone{
+        list-style: none;
+        padding: 10px 60px 0 100px;
+        margin-top: 40px;
+        position: relative;
+
+        &:first-child{
+          margin-top: 20px;
+        }
+
+        &:before{
+          content: '';
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          top: 10px;
+          left: 28px;
+          border: 5px solid $secondary-color;
+          background-color: #FFF;
+          border-radius: 50%;
+
+          // init state
+          opacity: 0;
+          transform: scale(0.3);
+        }
+
+        .working-period{
+          text-transform: uppercase;
+          font-weight: 600;
+          height: 30px;
+          width: auto;
+          display: inline-block;
+          line-height: 30px;
+          margin-bottom: 10px;
+          padding: 0 22px;
+          color: #FFF;
+          background-color: $secondary-color;
+          position: relative;
+
+          // init state
+          opacity: 0;
+          transform: translateX(40px);
+
+          &:before{
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            border-top: 8px solid transparent;
+            border-right: 10px solid $secondary-color;
+            border-bottom: 8px solid transparent;
+            right: calc(100%);
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+          }
+        }
+
+        .company-info{
+          color: $third-color;
+          font-weight: 600;
+          font-size: 18px;
+          padding-left: 22px;
+
+          // init state
+          opacity: 0;
+          transform: translateX(40px);
+        }
+
+        .description{
+          margin-top: 10px;
+          padding-left: 22px;
+
+          // init state
+          opacity: 0;
+          transform: translateX(40px);
+
+          *{
+            font-size: 15px;
+          }
+        }
+
+        &.active{
+
+          &:before{
+            -webkit-animation: popOut 500ms ease-out forwards;
+            -o-animation: popOut 500ms ease-out forwards;
+            animation: popOut 500ms ease-out forwards;
+          }
+
+          .working-period{
+            transition: all ease-out 500ms 400ms;
+            opacity: 1;
+            transform: translateX(0px);
+          }
+
+          .description, .company-info{
+            // init state
+            transition: all ease-out 500ms 800ms;
+            opacity: 1;
+            transform: translateX(0px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes popOut {
+  0%{
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  80%{
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  100%{
+    opacity: 1;
+    transform: scale(1);
   }
 }

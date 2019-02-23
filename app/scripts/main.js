@@ -1,13 +1,3 @@
-console.log('\'Allo \'Allo!');
-
-// Uncomment to enable Bootstrap tooltips
-// https://getbootstrap.com/docs/4.0/components/tooltips/#example-enable-tooltips-everywhere
-// $(function () { $('[data-toggle="tooltip"]').tooltip(); });
-
-// Uncomment to enable Bootstrap popovers
-// https://getbootstrap.com/docs/4.0/components/popovers/#example-enable-popovers-everywhere
-// $(function () { $('[data-toggle="popover"]').popover(); });
-
 $(document).ready(function(){
     $headerElement = $('#page-header');
     $heroSection = $('#hero-section');
@@ -16,7 +6,6 @@ $(document).ready(function(){
 
     // Initial State Of The MenuBar And Scroll To Top Button
     if($(document).scrollTop() > $heroSection.outerHeight() - 50){
-        console.log('add class');
         if(!$headerElement.hasClass('show-bg')){
             $headerElement.addClass('show-bg');
         }
@@ -29,8 +18,8 @@ $(document).ready(function(){
 
     // Add Active Class
     $(window).on('scroll', function(e){
+        /* Heading and scroll top button animation*/
         if($(document).scrollTop() > $heroSection.outerHeight() - 50){
-            console.log('add class');
             if(!$headerElement.hasClass('show-bg')){
                 $headerElement.addClass('show-bg');
             }
@@ -40,7 +29,6 @@ $(document).ready(function(){
             }
 
         } else {
-            console.log('remove class');
             if($headerElement.hasClass('show-bg')){
                 $headerElement.removeClass('show-bg');
             }
@@ -48,6 +36,33 @@ $(document).ready(function(){
             if($fixedScrollToTop.hasClass('active')){
                 $fixedScrollToTop.removeClass('active');
             }
+        }
+
+        /* ===== PROFILE SCROLL EVENT ===== */
+        /*
+         * Trigger animation effect on some of profile element
+         * */
+        var $technologiesAnchor = $('#technologies-anchor');
+        var $workingAnchor = $('#working-anchor');
+        var $portfolioAnchor = $('#portfolio-anchor');
+
+        if( $(document).scrollTop() > $technologiesAnchor.offset().top - $(window).height()/1.5){
+            $progressBarList = $('.progress-bar');
+            $progressBarList.each(function(index, value) {
+                var a = $(value).data();
+                $(value).css('width', a.style);
+            });
+        }
+
+        if( $(document).scrollTop() > $workingAnchor.offset().top  - $(window).height()/1.5){
+            var i = 0;
+            $allMilestone = $('.working-history__timeline__milestone');
+            $allMilestone.each(function(index, value) {
+                setTimeout(function(){
+                    $(value).addClass('active');
+                }, 200 + i*950);
+                i += 1;
+            });
         }
     });
 
@@ -83,4 +98,38 @@ $(document).ready(function(){
                 }
             }
         });
+
+    var $sliderObject = $('.profile-demo-slider');
+
+    $sliderObject.on( 'init', function (slick){
+        $activeSlide = $('.slick-current.slick-active');
+        $activeSlide.find('.portfolio-information').addClass('active');
+    });
+
+    $sliderObject.slick({
+        accessibility: true,
+        autoplay: true,
+        autoplaySpeed: 8000,
+        speed: 800,
+        arrows: true,
+        prevArrow: '<i class="fa fa-arrow-left slider-arrow slider-arrow__prev" aria-hidden="true"></i>\n',
+        nextArrow: '<i class="fa fa-arrow-right slider-arrow slider-arrow__next" aria-hidden="true"></i>\n',
+        pauseOnFocus: true,
+        pauseOnHover: true,
+        swipeToSlide: true,
+        fade: true,
+        cssEase: 'ease-out'
+    });
+
+    $sliderObject.on( 'reInit', function (slick){
+        $activeSlide = $('.slick-current.slick-active');
+        $activeSlide.find('.portfolio-information').addClass('active');
+    });
+
+    $sliderObject.on( 'afterChange', function (slick, currentSlide){
+        $activeSlide = $('.slick-current.slick-active');
+        $allSlide = $('.slick-slide:not(.slick-current.slick-active)');
+        $activeSlide.find('.portfolio-information').addClass('active');
+        $allSlide.find('.portfolio-information').removeClass('active');
+    });
 });

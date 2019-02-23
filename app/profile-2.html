@@ -12,6 +12,10 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -66,6 +70,7 @@
             <img class="rounded-circle" src="https://picsum.photos/220/220">
         </div><!-- Member Avatar -->
 
+        <!-- Member Contact Info -->
         <div class="social-items">
             <span class="social-item facebook">
                 <i class="fa fa-facebook-official" aria-hidden="true"></i>
@@ -78,7 +83,7 @@
             <span class="social-item google">
                 <i class="fa fa-google" aria-hidden="true"></i>
             </span>
-        </div>
+        </div><!-- Member Contact Info -->
 
         <!-- Member Basic Info -->
         <div class="member-basic-info text-center">
@@ -120,47 +125,256 @@
                 </div>
             </article>
 
-            <article class="profile-content-block mt-30">
+            <!-- Technologies Ranking Using Progress Bar -->
+            <article class="profile-content-block mt-30"  id="technologies-anchor">
                 <h3 class="content-block-title">
                     <span class="key-letter">F</span>eatured Technologies
                 </h3>
                 <div class="content-block-context">
-                    <p>
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit
-                        esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                        sint occaecat cupidatat non proident, sunt in culpa qui
-                        officia deserunt mollit anim id est laborum."
-                    </p>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <h5 class="title">Languages </h5>
+                            <ul class="technology-list">
+                                <li class="technology-item">
+                                    <div class="row">
+                                        <div class="tecnology-icon col-md-3 col-sm-4">
+                                            <i class="devicon-javascript-plain"></i>
+                                        </div>
+                                        <div class="technology-ranking col-md-8 col-sm-9">
+                                            <div class="progress" style="height: 5px;">
+                                                <div class="progress-bar" role="progressbar" data-style="100%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li><li class="technology-item">
+                                <div class="row">
+                                    <div class="tecnology-icon col-md-3 col-sm-4">
+                                        <i class="devicon-javascript-plain"></i>
+                                    </div>
+                                    <div class="technology-ranking col-md-8 col-sm-9">
+                                        <div class="progress" style="height: 5px;">
+                                            <div class="progress-bar" role="progressbar" data-style="75%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li><li class="technology-item">
+                                <div class="row">
+                                    <div class="tecnology-icon col-md-3 col-sm-4">
+                                        <i class="devicon-javascript-plain"></i>
+                                    </div>
+                                    <div class="technology-ranking col-md-8 col-sm-9">
+                                        <div class="progress" style="height: 5px;">
+                                            <div class="progress-bar" role="progressbar" data-style="56%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                                <li class="technology-item">
+                                    <div class="row">
+                                        <div class="tecnology-icon col-md-3 col-sm-4">
+                                            <i class="devicon-javascript-plain"></i>
+                                        </div>
+                                        <div class="technology-ranking col-md-8 col-sm-9">
+                                            <div class="progress" style="height: 5px;">
+                                                <div class="progress-bar" role="progressbar" data-style="75%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-6 col-sm-12">
+                            <h5 class="title">Frameworks </h5>
+                            <ul class="technology-list">
+                                <li class="technology-item">
+                                    <div class="row">
+                                        <div class="tecnology-icon col-md-3 col-sm-4">
+                                            <i class="devicon-javascript-plain"></i>
+                                        </div>
+                                        <div class="technology-ranking col-md-8 col-sm-9">
+                                            <div class="progress" style="height: 5px;">
+                                                <div class="progress-bar" role="progressbar" data-style="75%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li><li class="technology-item">
+                                <div class="row">
+                                    <div class="tecnology-icon col-md-3 col-sm-4">
+                                        <i class="devicon-javascript-plain"></i>
+                                    </div>
+                                    <div class="technology-ranking col-md-8 col-sm-9">
+                                        <div class="progress" style="height: 5px;">
+                                            <div class="progress-bar" role="progressbar" data-style="95%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li><li class="technology-item">
+                                <div class="row">
+                                    <div class="tecnology-icon col-md-3 col-sm-4">
+                                        <i class="devicon-javascript-plain"></i>
+                                    </div>
+                                    <div class="technology-ranking col-md-8 col-sm-9">
+                                        <div class="progress" style="height: 5px;">
+                                            <div class="progress-bar" role="progressbar" data-style="35%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                                <li class="technology-item">
+                                    <div class="row">
+                                        <div class="tecnology-icon col-md-3 col-sm-4">
+                                            <i class="devicon-javascript-plain"></i>
+                                        </div>
+                                        <div class="technology-ranking col-md-8 col-sm-9">
+                                            <div class="progress" style="height: 5px;">
+                                                <div class="progress-bar" role="progressbar" data-style="50%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </article>
 
-            <article class="profile-content-block mt-30">
+            <article class="profile-content-block mt-30" id="portfolio-anchor">
                 <h3 class="content-block-title">
-                    <span class="key-letter">W</span>orking History
+                    <span class="key-letter">P</span>ortfolio
                 </h3>
 
                 <div class="content-block-context">
                     <p>
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit
-                        esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                        Excepteur
                         sint occaecat cupidatat non proident, sunt in culpa qui
                         officia deserunt mollit anim id est laborum."
                     </p>
+
+                    <div class="profile-demo-slider">
+                        <div class="portfolio-item">
+                            <img class="img-fluid" src="https://picsum.photos/1920/800">
+
+                            <div class="portfolio-information">
+                                <div class="portfolio-item-context">
+                                    <h5 class="portfolio-name">Porfolio No.1</h5>
+                                    <p class="portfolio-desc">Short Description</p>
+                                </div>
+                                <div class="portfolio-item-cta">
+                                    <a class="btn btn-primary">Explore</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-item">
+                            <img class="img-fluid" src="https://picsum.photos/1920/790">
+
+                            <div class="portfolio-information">
+                                <div class="portfolio-item-context">
+                                    <h5 class="portfolio-name">Porfolio No.1</h5>
+                                    <p class="portfolio-desc">Short Description</p>
+                                </div>
+                                <div class="portfolio-item-cta">
+                                    <a class="btn btn-primary">Explore</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-item">
+                            <img class="img-fluid" src="https://picsum.photos/1920/795">
+
+                            <div class="portfolio-information">
+                                <div class="portfolio-item-context">
+                                    <h5 class="portfolio-name">Porfolio No.1</h5>
+                                    <p class="portfolio-desc">Short Description</p>
+                                </div>
+                                <div class="portfolio-item-cta">
+                                    <a class="btn btn-primary">Explore</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </article>
 
             <article class="profile-content-block mt-30">
+                <h3 class="content-block-title">
+                    <span class="key-letter">W</span>orking Experience
+                </h3>
+
+                <div class="content-block-context">
+                    <p>
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        Excepteur
+                        sint occaecat cupidatat non proident, sunt in culpa qui
+                        officia deserunt mollit anim id est laborum."
+                    </p>
+
+                    <div class="working-history" id="working-anchor">
+                        <ul class="working-history__timeline">
+                            <li class="working-history__timeline__milestone">
+                                <div class="working-period">Apr 2016 to May 2017</div>
+                                <div class="company-info">IBSVN</div>
+                                <div class="description">
+                                    <p>
+                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        Excepteur
+                                        sint occaecat cupidatat non proident, sunt in culpa qui
+                                        officia deserunt mollit anim id est laborum."
+                                    </p>
+                                    <p>
+                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        Excepteur
+                                        sint occaecat cupidatat non proident, sunt in culpa qui
+                                        officia deserunt mollit anim id est laborum."
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li class="working-history__timeline__milestone">
+                                <div class="working-period">Apr 2016 to May 2017</div>
+                                <div class="company-info">OPPO Vietnam</div>
+                                <div class="description">
+                                    <p>
+                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        Excepteur<br>
+                                        sint occaecat cupidatat non proident, sunt in culpa qui
+                                        officia deserunt mollit anim id est laborum."
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li class="working-history__timeline__milestone">
+                                <div class="working-period">Apr 2016 to May 2017</div>
+                                <div class="company-info">Gumi Vietnam</div>
+                                <div class="description">
+                                    <p>
+                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        Excepteur
+                                        sint occaecat cupidatat non proident, sunt in culpa qui
+                                        officia deserunt mollit anim id est laborum."
+                                    </p>
+                                    <p>
+                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        Excepteur
+                                        sint occaecat cupidatat non proident, sunt in culpa qui
+                                        officia deserunt mollit anim id est laborum."
+                                    </p>
+                                    <p>
+                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        Excepteur
+                                        sint occaecat cupidatat non proident, sunt in culpa qui
+                                        officia deserunt mollit anim id est laborum."
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
             </article>
+
+
         </div>
 
         <div class="profile-footer">
@@ -239,13 +453,11 @@
 </script>
 
 <!-- build:js scripts/vendor.js -->
-
 <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
-
-
 <script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
+<script type="text/javascript" src="/node_modules/slick-carousel/slick/slick.js"></script>
 <!-- endbuild -->
+
 <!-- build:js scripts/main.js -->
 <script src="scripts/main.js"></script>
 <!-- endbuild -->
