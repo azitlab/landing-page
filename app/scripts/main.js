@@ -67,6 +67,31 @@ $(document).ready(function(){
     });
 
 
+
+    /* ===== MOBILE MENU ===== */
+    $menuBtn = $('#show-menu-btn');
+    $menuOverlay = $('#menu-overlay');
+    showMenu = false;
+
+    $menuBtn.on('click', function(e){
+        if(!showMenu){
+            $headerElement.addClass('show-menu-bar');
+            setTimeout(function(){showMenu = true;},320);
+        } else {
+            $headerElement.removeClass('show-menu-bar');
+            setTimeout(function(){showMenu = false;},320);
+        }
+    });
+
+    $menuOverlay.on('click', function(e){
+        if(showMenu){
+            $headerElement.removeClass('show-menu-bar');
+            setTimeout(function(){showMenu = false;},320);
+        }
+    });
+
+
+
     /* ===== SMOOTH SCROLLING FEATURE =====
     * By - https://css-tricks.com/snippets/jquery/smooth-scrolling/
     * */

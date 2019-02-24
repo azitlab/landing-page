@@ -37,8 +37,26 @@
       color: #EEE;
     }
   }
+
+  /* ===== Responsive ===== */
 }
 
+
+/*======================
+* About Us Section
+====================== */
+#about-us-section{
+  /* ===== Responsive ===== */
+  @media #{$information-tablet} {
+    .about-us__image{
+      margin-bottom: 40px;
+
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
 
 /*======================
 * Team Member Section
@@ -54,6 +72,7 @@
         padding: 4px;
         background-color: $third-color;
         left: 50%;
+        -webkit-transform: translate(-50%);
         transform: translate(-50%);
         border-radius: 50%;
         z-index: 2;
@@ -97,6 +116,54 @@
           color: $small-text-color;
           font-weight: 500;
           margin: 0;
+        }
+      }
+
+      .member-social-links{
+        .social-item{
+          padding: 0 4px;
+          font-size: 20px;
+          color: $light-text-color;
+          cursor: pointer;
+
+          &.lg{
+            font-size: 25px;
+            padding: 0 6px;
+          }
+        }
+      }
+    }
+  }
+
+  /* ===== Responsive ===== */
+  @media #{$information-tablet} {
+    .main-content{
+      .member-block{
+        margin-bottom: 40px;
+
+        .member-picture{
+          padding: 4px;
+        }
+
+        .member-profile{
+          &:before{
+            height: 6px;
+          }
+
+          .member-name{
+            font-size: 19px;
+          }
+
+          .member-position{
+            font-size: 15px;
+          }
+        }
+
+        .member-social-links{
+          .social-item{
+            margin-top: 10px;
+            font-size: 24px;
+          }
         }
       }
     }
@@ -224,6 +291,13 @@
           color: $small-text-color;
         }
       }
+    }
+  }
+
+  /* ===== Responsive ===== */
+  @media #{$information-phone} {
+    .technology-item{
+      width: 50%;
     }
   }
 }
