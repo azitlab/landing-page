@@ -127,6 +127,66 @@
           i,em{
             font-size: 34px;
             color: #DDD;
+
+            &.icon-angular, &.devicon-angularjs-plain{
+              color: $angular-color;
+            }
+
+            &.devicon-wordpress-plain{
+              color: $wordpress-color;
+            }
+
+            &.icon-rails{
+              color: $ruby-color;
+            }
+
+            &.devicon-css3-plain{
+              color: $css-color;
+            }
+
+            &.icon-react, &.devicon-react-original {
+              color: $react-color;
+            }
+
+            &.devicon-apple-original{
+              color: $ios-color;
+            }
+
+            &.devicon-android-plain{
+              color: $android-color;
+            }
+
+            &.devicon-javascript-plain{
+              color: $javascript-color;
+            }
+
+            &.devicon-html5-plain{
+              color: $html-color;
+            }
+
+            &.devicon-docker-plain{
+              color: $docker-color;
+            }
+
+            &.devicon-mongodb-plain{
+              color: $mongodb-color;
+            }
+
+            &.devicon-vuejs-plain{
+              color: $vue-color;
+            }
+
+            &.devicon-php-plain{
+              color: $php-color;
+            }
+
+            &.devicon-mysql-plain{
+              color: $mysql-color;
+            }
+
+            &.devicon-amazonwebservices-original{
+              color: $amazon-color;
+            }
           }
         }
       }
