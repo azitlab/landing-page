@@ -9,18 +9,32 @@
     position: relative;
     box-shadow: 0 0 25px rgba(0,0,0,0.4);
     padding: 145px 40px 100px;
-    border-top: 8px solid $secondary-color;
-    border-bottom: 8px solid $secondary-color;
+    border-top: 8px solid $third-color;
+    border-bottom: 8px solid $third-color;
 
     .member-picture{
-      padding: 5px;
-      border-radius: 50%;
+      border: 6px solid $third-color;
       position: absolute;
       left: 50%;
       top: -116px;
+      width: 220px;
+      height: 220px;
+      border-radius: 110px;
+      overflow: hidden;
       background-color: #efefea;
       box-shadow: 0 0 12px rgba(0,0,0,0.6);
+      -webkit-transform: translateX(-50%);
       transform: translateX(-50%);
+
+      img{
+        max-width: 110%;
+        max-height: 110%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
     }
 
     .social-items{
@@ -341,6 +355,283 @@
             transition: all ease-out 500ms 800ms;
             opacity: 1;
             transform: translateX(0px);
+          }
+        }
+      }
+    }
+  }
+
+  /* ===== Responsive ===== */
+  @media #{$information-tablet} {
+    .profile{
+      top: -40px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.4);
+      padding: 135px 40px 60px;
+
+      .member-picture{
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        top: -103px;
+      }
+
+      .social-items{
+        top: 140px;
+        right: 0;
+
+        .social-item{
+          width: 46px;
+          height: 46px;
+          line-height: 46px;
+          font-size: 19px;
+        }
+      }
+
+      .member-basic-info{
+
+        .member-name {
+          font-size: 30px;
+          margin-bottom: 10px;
+        }
+
+        .member-role{
+          font-size: 15px;
+          padding: 0 30px;
+          height: 28px;
+          line-height: 28px;
+          border-radius: 14px;
+        }
+      }
+
+      .profile-content{
+
+        .profile-content-block{
+          margin-bottom: 35px;
+
+          .title{
+            margin-bottom: 20px;
+          }
+
+          .content-block-title{
+            margin-bottom: 30px;
+          }
+
+          .content-block-context{
+            padding: 0;
+
+            img{
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    /* ============== Special Elements =============== */
+
+    /* Portfolio Demo Slider */
+    .profile-demo-slider{
+      margin-top: 25px;
+
+      .portfolio-item{
+        height: 380px;
+
+        img{
+          position: absolute;
+          max-height: 380px;
+          min-width: 100%;
+          width: auto !important;
+          max-width: none;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
+
+        .portfolio-information{
+          padding: 10px 30px;
+        }
+      }
+    }
+
+    /* Working Timeline */
+    .working-history{
+      padding: 0;
+
+      &__timeline{
+        padding: 0;
+
+        &__milestone{
+          padding: 10px 0 0 85px;
+          margin-top: 30px;
+
+          &:before{
+            width: 26px;
+            height: 26px;
+            top: 10px;
+            left: 30px;
+          }
+
+          .working-period{
+            height: 28px;
+            line-height: 28px;
+            margin-bottom: 10px;
+            padding: 0 20px;
+
+            &:before{
+              border-top: 7px solid transparent;
+              border-right: 9px solid $secondary-color;
+              border-bottom: 7px solid transparent;
+            }
+          }
+
+          .company-info{
+            font-weight: 600;
+            font-size: 18px;
+            padding-left: 22px;
+          }
+
+          .description{
+            margin-top: 10px;
+            padding-left: 22px;
+
+            *{
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$information-phone} {
+    .profile{
+      top: -40px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.4);
+      padding: 125px 20px 40px;
+      margin-bottom: -40px;
+
+      .member-picture{
+        width: 180px;
+        height: 180px;
+        border-radius: 90px;
+        top: -93px;
+      }
+
+      .social-items{
+        top: 70px;
+        right: 0;
+
+        .social-item{
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+          font-size: 20px;
+        }
+      }
+
+      .member-basic-info{
+
+        .member-name {
+          font-size: 25px;
+          padding: 0 50px;
+          letter-spacing: 0;
+          margin-bottom: 8px;
+        }
+
+        .member-role{
+          font-size: 14px;
+          padding: 0 30px;
+          height: 26px;
+          line-height: 26px;
+          border-radius: 13px;
+        }
+      }
+
+      .profile-content{
+
+        .profile-content-block{
+          margin-bottom: 30px;
+
+          .title{
+            margin-bottom: 15px;
+          }
+
+          .content-block-title{
+            margin-bottom: 25px;
+          }
+        }
+      }
+    }
+
+    /* ============== Special Elements =============== */
+
+    /* Portfolio Demo Slider */
+    .profile-demo-slider{
+      margin-top: 20px;
+
+      .portfolio-item{
+        height: 280px;
+
+        img{
+          max-height: 280px;
+        }
+
+        .portfolio-information{
+          padding: 10px 30px;
+          height: auto;
+
+          .portfolio-desc{
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+
+    /* Working Timeline */
+    .working-history{
+      padding: 0;
+
+      &:before{
+        width: 5px;
+        left: 16px;
+      }
+
+      &__timeline{
+        padding: 0;
+
+        &__milestone{
+          padding: 10px 0 0 50px;
+          margin-top: 30px;
+
+          &:before{
+            width: 24px;
+            height: 24px;
+            top: 10px;
+            left: 6px;
+          }
+
+          .working-period{
+            height: 28px;
+            line-height: 28px;
+            margin-bottom: 10px;
+            padding: 0 12px;
+            font-size: 15px;
+          }
+
+          .company-info{
+            font-weight: 600;
+            font-size: 17px;
+            padding-left: 12px;
+          }
+
+          .description{
+            margin-top: 10px;
+            padding-left: 13px;
+
+            *{
+              font-size: 13px;
+            }
           }
         }
       }

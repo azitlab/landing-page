@@ -29,18 +29,31 @@
 
 <!-- FIXED MENU -->
 <header class="page-header" id="page-header">
+    <!-- Mobile Menu Overlay -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+
     <div class="container header-navbar">
         <div class="nav-logo">
             <img src="logo-simple.png">
 
             <span class="header-title">AZIT Lab</span>
         </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="menu-btn" id="show-menu-btn">
+            <i class="fa fa-bars" aria-hidden="true" id="show-menu-trigger"></i>
+            <i class="fa fa-times" aria-hidden="true" id="hide-menu-trigger"></i>
+        </div>
+
         <ul class="nav justify-content-end">
             <li class="nav-item">
                 <a class="nav-link active" href="#">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Profiles</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Demos</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Contact Us</a>
@@ -102,10 +115,10 @@
 
                 <div class="content-block-context">
                     <div class="row">
-                        <div class="col-md-6 col-sm-12">
+                        <div class="col-lg-6 col-md-12 mb-20">
                             <img class="img-fluid" src="https://picsum.photos/480/280">
                         </div>
-                        <div class="col-md-6 col-sm-12">
+                        <div class="col-lg-6 col-md-12">
                             <p>
                                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                 sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -137,10 +150,10 @@
                             <ul class="technology-list">
                                 <li class="technology-item">
                                     <div class="row">
-                                        <div class="tecnology-icon col-md-3 col-sm-4">
+                                        <div class="tecnology-icon col-md-4 col-3">
                                             <i class="devicon-javascript-plain"></i>
                                         </div>
-                                        <div class="technology-ranking col-md-8 col-sm-9">
+                                        <div class="technology-ranking col-md-8 col-9">
                                             <div class="progress" style="height: 5px;">
                                                 <div class="progress-bar" role="progressbar" data-style="100%"></div>
                                             </div>
@@ -148,10 +161,10 @@
                                     </div>
                                 </li><li class="technology-item">
                                 <div class="row">
-                                    <div class="tecnology-icon col-md-3 col-sm-4">
+                                    <div class="tecnology-icon col-md-4 col-3">
                                         <i class="devicon-javascript-plain"></i>
                                     </div>
-                                    <div class="technology-ranking col-md-8 col-sm-9">
+                                    <div class="technology-ranking col-md-8 col-9">
                                         <div class="progress" style="height: 5px;">
                                             <div class="progress-bar" role="progressbar" data-style="75%"></div>
                                         </div>
@@ -159,10 +172,10 @@
                                 </div>
                             </li><li class="technology-item">
                                 <div class="row">
-                                    <div class="tecnology-icon col-md-3 col-sm-4">
+                                    <div class="tecnology-icon col-md-4 col-3">
                                         <i class="devicon-javascript-plain"></i>
                                     </div>
-                                    <div class="technology-ranking col-md-8 col-sm-9">
+                                    <div class="technology-ranking col-md-8 col-9">
                                         <div class="progress" style="height: 5px;">
                                             <div class="progress-bar" role="progressbar" data-style="56%"></div>
                                         </div>
@@ -171,10 +184,10 @@
                             </li>
                                 <li class="technology-item">
                                     <div class="row">
-                                        <div class="tecnology-icon col-md-3 col-sm-4">
+                                        <div class="tecnology-icon col-md-4 col-3">
                                             <i class="devicon-javascript-plain"></i>
                                         </div>
-                                        <div class="technology-ranking col-md-8 col-sm-9">
+                                        <div class="technology-ranking col-md-8 col-9">
                                             <div class="progress" style="height: 5px;">
                                                 <div class="progress-bar" role="progressbar" data-style="75%"></div>
                                             </div>
@@ -189,10 +202,10 @@
                             <ul class="technology-list">
                                 <li class="technology-item">
                                     <div class="row">
-                                        <div class="tecnology-icon col-md-3 col-sm-4">
+                                        <div class="tecnology-icon col-md-4 col-3">
                                             <i class="devicon-javascript-plain"></i>
                                         </div>
-                                        <div class="technology-ranking col-md-8 col-sm-9">
+                                        <div class="technology-ranking col-md-8 col-9">
                                             <div class="progress" style="height: 5px;">
                                                 <div class="progress-bar" role="progressbar" data-style="75%"></div>
                                             </div>
@@ -200,10 +213,10 @@
                                     </div>
                                 </li><li class="technology-item">
                                 <div class="row">
-                                    <div class="tecnology-icon col-md-3 col-sm-4">
+                                    <div class="tecnology-icon col-md-4 col-3">
                                         <i class="devicon-javascript-plain"></i>
                                     </div>
-                                    <div class="technology-ranking col-md-8 col-sm-9">
+                                    <div class="technology-ranking col-md-8 col-9">
                                         <div class="progress" style="height: 5px;">
                                             <div class="progress-bar" role="progressbar" data-style="95%"></div>
                                         </div>
@@ -211,10 +224,10 @@
                                 </div>
                             </li><li class="technology-item">
                                 <div class="row">
-                                    <div class="tecnology-icon col-md-3 col-sm-4">
+                                    <div class="tecnology-icon col-md-4 col-3">
                                         <i class="devicon-javascript-plain"></i>
                                     </div>
-                                    <div class="technology-ranking col-md-8 col-sm-9">
+                                    <div class="technology-ranking col-md-8 col-9">
                                         <div class="progress" style="height: 5px;">
                                             <div class="progress-bar" role="progressbar" data-style="35%"></div>
                                         </div>
@@ -223,10 +236,10 @@
                             </li>
                                 <li class="technology-item">
                                     <div class="row">
-                                        <div class="tecnology-icon col-md-3 col-sm-4">
+                                        <div class="tecnology-icon col-md-4 col-3">
                                             <i class="devicon-javascript-plain"></i>
                                         </div>
-                                        <div class="technology-ranking col-md-8 col-sm-9">
+                                        <div class="technology-ranking col-md-8 col-9">
                                             <div class="progress" style="height: 5px;">
                                                 <div class="progress-bar" role="progressbar" data-style="50%"></div>
                                             </div>
@@ -262,7 +275,10 @@
                                     <p class="portfolio-desc">Short Description</p>
                                 </div>
                                 <div class="portfolio-item-cta">
-                                    <a class="btn btn-primary">Explore</a>
+                                    <a class="btn btn-primary d-none d-sm-block">Explore</a>
+                                    <a class="btn btn-primary d-block d-sm-none i-btn">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -271,11 +287,14 @@
 
                             <div class="portfolio-information">
                                 <div class="portfolio-item-context">
-                                    <h5 class="portfolio-name">Porfolio No.1</h5>
+                                    <h5 class="portfolio-name ">Porfolio No.1</h5>
                                     <p class="portfolio-desc">Short Description</p>
                                 </div>
                                 <div class="portfolio-item-cta">
-                                    <a class="btn btn-primary">Explore</a>
+                                    <a class="btn btn-primary d-none d-sm-block">Explore</a>
+                                    <a class="btn btn-primary d-block d-sm-none i-btn">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -288,7 +307,10 @@
                                     <p class="portfolio-desc">Short Description</p>
                                 </div>
                                 <div class="portfolio-item-cta">
-                                    <a class="btn btn-primary">Explore</a>
+                                    <a class="btn btn-primary d-none d-sm-block">Explore</a>
+                                    <a class="btn btn-primary d-block d-sm-none i-btn">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
