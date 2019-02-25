@@ -181,6 +181,16 @@ if (isDev) {
   serve = series(build, startDistServer);
 }
 
+// deploy
+const ghPages = require('gulp-gh-pages');
+function gulpDeploy() {
+  return src('dist/**/*')
+    .pipe(ghPages({
+      branch: 'release'
+    }));
+}
+// end deploy
+exports.deploy = series(gulpDeploy)
 exports.serve = serve;
 exports.build = build;
 exports.default = build;
