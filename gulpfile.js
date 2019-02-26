@@ -65,7 +65,7 @@ function html() {
     .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
     .pipe($.if(/\.css$/, $.postcss([cssnano({safe: true, autoprefixer: false})])))
     .pipe($.if(/\.html$/, $.htmlmin({
-      collapseWhitespace: true,
+      // collapseWhitespace: true,
       minifyCSS: true,
       minifyJS: {compress: {drop_console: true}},
       processConditionalComments: true,
@@ -186,7 +186,7 @@ const ghPages = require('gulp-gh-pages');
 function gulpDeploy() {
   return src('dist/**/*')
     .pipe(ghPages({
-      branch: 'release'
+      branch: 'master'
     }));
 }
 // end deploy
