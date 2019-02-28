@@ -135,6 +135,7 @@ function startAppServer() {
     '.tmp/fonts/**/*'
   ]).on('change', server.reload);
 
+  watch(['app/html/layout/*.html', 'app/html/pages/*.html'], buildTemplate)
   watch('app/styles/**/*.scss', styles);
   watch('app/scripts/**/*.js', scripts);
   watch('app/fonts/**/*', fonts);
@@ -174,7 +175,7 @@ function startDistServer() {
 
 let serve;
 if (isDev) {
-  serve = series(clean, parallel(styles, scripts, fonts), startAppServer);
+  serve = series(clean, parallel(buildTemplate, styles, scripts, fonts), startAppServer);
 } else if (isTest) {
   serve = series(scripts, startTestServer);
 } else if (isProd) {
@@ -190,6 +191,18 @@ function gulpDeploy() {
     }));
 }
 // end deploy
+
+
+// template 
+const template = require('gulp-template-html');
+function buildTemplate() {
+  return src("app/html/pages/*.html")
+    .pipe(template("app/html/layout/main.html"))
+    .pipe(dest("app"));
+}
+//
+
+
 exports.deploy = series(gulpDeploy)
 exports.serve = serve;
 exports.build = build;
