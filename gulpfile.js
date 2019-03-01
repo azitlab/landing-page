@@ -109,7 +109,7 @@ function measureSize() {
 const build = series(
   parallel(
     lint,
-    series(parallel(styles, scripts), html),
+    series(parallel(buildTemplate, styles, scripts), html),
     images,
     fonts,
     extras

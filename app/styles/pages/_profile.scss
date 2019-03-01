@@ -53,9 +53,10 @@
         text-align: center;
         box-shadow: inset 0 -1px 2px rgba(0,0,0,0.15);
 
-        &.facebook{ background-color: #4267B2; }
-        &.linkedin{ background-color: #0077B5; }
-        &.google{ background-color: #D54B3D; }
+        &.facebook{ background-color: $facebook-color; }
+        &.linkedin{ background-color: $linkedin-color; }
+        &.google{ background-color: $google-color; }
+        &.twitter { background-color: $twitter-color; }
       }
     }
 
@@ -186,6 +187,38 @@
 
             &.devicon-amazonwebservices-original{
               color: $amazon-color;
+            }
+
+            &.devicon-laravel-plain {
+              color: $laravel-color;
+            }
+
+            &.devicon-linux-plain {
+              color: #333;
+            }
+
+            &.devicon-dot-net-plain {
+              color: $dot-net-color;
+            }
+
+            &.devicon-swift-plain {
+              color: $swift-color;
+            }
+
+            &.devicon-nodejs-plain {
+              color: $nodejs-color;
+            }
+
+            &.devicon-java-plain {
+              color: $java-color;
+            }
+
+            &.devicon-ruby-plain {
+              color: $ruby-color;
+            }
+
+            &.devicon-rails-plain {
+              color: $ruby-color;
             }
           }
         }
