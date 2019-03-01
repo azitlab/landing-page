@@ -126,6 +126,20 @@
           color: $light-text-color;
           cursor: pointer;
 
+          i {
+            &.fa-facebook-official {
+              &:hover {
+                color: $facebook-color;
+              }
+            }
+
+            &.fa-linkedin {
+              &:hover {
+                color: $linkedin-color;
+              }
+            }
+          }
+
           &.lg{
             font-size: 25px;
             padding: 0 6px;

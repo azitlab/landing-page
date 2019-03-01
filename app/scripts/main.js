@@ -46,23 +46,27 @@ $(document).ready(function(){
         var $workingAnchor = $('#working-anchor');
         var $portfolioAnchor = $('#portfolio-anchor');
 
-        if( $(document).scrollTop() > $technologiesAnchor.offset().top - $(window).height()/1.5){
-            $progressBarList = $('.progress-bar');
-            $progressBarList.each(function(index, value) {
-                var a = $(value).data();
-                $(value).css('width', a.style);
-            });
+        if($technologiesAnchor.length > 0) {
+            if( $(document).scrollTop() > $technologiesAnchor.offset().top - $(window).height()/1.5){
+                $progressBarList = $('.progress-bar');
+                $progressBarList.each(function(index, value) {
+                    var a = $(value).data();
+                    $(value).css('width', a.style);
+                });
+            }
         }
 
-        if( $(document).scrollTop() > $workingAnchor.offset().top  - $(window).height()/1.5){
-            var i = 0;
-            $allMilestone = $('.working-history__timeline__milestone');
-            $allMilestone.each(function(index, value) {
-                setTimeout(function(){
-                    $(value).addClass('active');
-                }, 200 + i*950);
-                i += 1;
-            });
+        if($workingAnchor.length > 0) {
+            if( $(document).scrollTop() > $workingAnchor.offset().top  - $(window).height()/1.5){
+                var i = 0;
+                $allMilestone = $('.working-history__timeline__milestone');
+                $allMilestone.each(function(index, value) {
+                    setTimeout(function(){
+                        $(value).addClass('active');
+                    }, 200 + i*950);
+                    i += 1;
+                });
+            }
         }
     });
 
