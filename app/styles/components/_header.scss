@@ -35,6 +35,7 @@
     color: inherit;
 
     .nav-logo{
+      cursor: pointer;
       position: relative;
 
       img{
@@ -42,6 +43,7 @@
       }
 
       .header-title{
+        color: #FFF;
         margin-left: 20px;
         font-weight: 600;
         font-size: 18px;
