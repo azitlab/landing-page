@@ -220,6 +220,22 @@
             &.devicon-rails-plain {
               color: $ruby-color;
             }
+            
+            &.devicon-nginx-plain {
+              color: $nginx-color;
+            }
+
+            &.devicon-apache-plain {
+              color: $apache-color;
+            }
+
+            &.devicon-heroku-original {
+              color: $heroku-color;
+            }
+
+            &.devicon-python-plain {
+              color: $python-color;
+            }
           }
         }
       }
