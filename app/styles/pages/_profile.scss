@@ -237,6 +237,18 @@
             &.devicon-python-plain {
               color: $python-color;
             }
+
+            &.devicon-go-plain {
+              color: $golang-color;
+            }
+
+            &.devicon-csharp-plain {
+              color: $csharp-color;
+            }
+
+            &.devicon-c-plain {
+              color: $c-color;
+            }
           }
         }
       }
