@@ -133,6 +133,18 @@
               }
             }
 
+            &.fa-github {
+              &:hover {
+                color: $github-color;
+              }
+            }
+
+            &.fa-google {
+              &:hover {
+                color: $google-color;
+              }
+            }
+
             &.fa-linkedin {
               &:hover {
                 color: $linkedin-color;

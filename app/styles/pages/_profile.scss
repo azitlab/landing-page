@@ -57,6 +57,7 @@
         &.linkedin{ background-color: $linkedin-color; }
         &.google{ background-color: $google-color; }
         &.twitter { background-color: $twitter-color; }
+        &.github { background-color: $github-color; }
       }
     }
 
@@ -219,6 +220,34 @@
 
             &.devicon-rails-plain {
               color: $ruby-color;
+            }
+            
+            &.devicon-nginx-plain {
+              color: $nginx-color;
+            }
+
+            &.devicon-apache-plain {
+              color: $apache-color;
+            }
+
+            &.devicon-heroku-original {
+              color: $heroku-color;
+            }
+
+            &.devicon-python-plain {
+              color: $python-color;
+            }
+
+            &.devicon-go-plain {
+              color: $golang-color;
+            }
+
+            &.devicon-csharp-plain {
+              color: $csharp-color;
+            }
+
+            &.devicon-c-plain {
+              color: $c-color;
             }
           }
         }
