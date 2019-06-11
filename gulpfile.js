@@ -4,6 +4,7 @@ const gulpLoadPlugins = require('gulp-load-plugins');
 const browserSync = require('browser-sync');
 const del = require('del');
 const autoprefixer = require('autoprefixer');
+const gulpReplace = require('gulp-replace')
 const cssnano = require('cssnano');
 const { argv } = require('yargs');
 
@@ -64,6 +65,7 @@ function html() {
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
     .pipe($.if(/\.css$/, $.postcss([cssnano({safe: true, autoprefixer: false})])))
+    .pipe(gulpReplace('azitUrl~', isProd ? 'http://azitlab.github.io/landing-page/' : ''))
     .pipe($.if(/\.html$/, $.htmlmin({
       // collapseWhitespace: true,
       minifyCSS: true,
