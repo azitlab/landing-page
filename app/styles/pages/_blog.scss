@@ -5,9 +5,25 @@
     a {
         color: #0285a8;
     }
+    h4, h5 {
+        font-family: Helvetica;
+    }
+    h5 {
+        font-weight: 500;
+    }
     .blog-quotes {
         padding: 15px 20px; 
         display: block; 
         background: #ccc;
+        
+    }
+}
+
+.sub-hero-section {
+    h5 {
+        font-weight: 400;
+        a {
+            color: #FFF;
+        }
     }
 }
