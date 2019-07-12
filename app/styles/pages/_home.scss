@@ -125,7 +125,9 @@
           font-size: 20px;
           color: $light-text-color;
           cursor: pointer;
-
+          a {
+            color: $light-text-color;
+          }
           i {
             &.fa-facebook-official {
               &:hover {
