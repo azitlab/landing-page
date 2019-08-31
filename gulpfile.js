@@ -1,5 +1,5 @@
 // generated on 2019-02-15 using generator-webapp 4.0.0-2
-const { src, dest, watch, series, parallel, lastRun } = require('gulp');
+const { src, dest, watch, series, parallel, lastRun, start, task } = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const browserSync = require('browser-sync');
 const del = require('del');
@@ -198,14 +198,46 @@ function gulpDeploy() {
 // template 
 const template = require('gulp-template-html');
 function buildTemplate() {
+
   return src("app/html/pages/*.html")
     .pipe(template("app/html/layout/main.html"))
     .pipe(dest("app"));
 }
-//
 
+const arg = (argList => {
+
+  let arg = {}, a, opt, thisOpt, curOpt;
+  for (a = 0; a < argList.length; a++) {
+
+    thisOpt = argList[a].trim();
+    opt = thisOpt.replace(/^\-+/, '');
+
+    if (opt === thisOpt) {
+
+      // argument value
+      if (curOpt) arg[curOpt] = opt;
+      curOpt = null;
+
+    }
+    else {
+
+      // argument name
+      curOpt = opt;
+      arg[curOpt] = true;
+    }
+  }
+
+  return arg;
+
+})(process.argv);
 
 exports.deploy = series(gulpDeploy)
 exports.serve = serve;
 exports.build = build;
 exports.default = build;
+exports.checking = series(function () {
+  console.log(arg.user)
+  return src("app/html/pages/*.html")
+    .pipe(template("app/html/layout/main.html"))
+    .pipe(dest("app"));
+})
